@@ -30,7 +30,7 @@ function UpdateFood() {
     try {
       const fetchFoodItem = async () => {
         const response = await axios.get(
-          `http://localhost:3000/api/food/getFoodById/${id}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/getFoodById/${id}`
         );
         setFood(response.data.data.food);
         console.log(response.data.data.food);
@@ -69,7 +69,7 @@ function UpdateFood() {
     e.preventDefault();
     try {
       await axios.patch(
-        `http://localhost:3000/api/food/updateFood/${id}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/updateFood/${id}`,
         food
       );
       notify("success", "", "Food updated successfully");

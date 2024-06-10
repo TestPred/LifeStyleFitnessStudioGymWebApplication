@@ -21,7 +21,7 @@ function UserExercises() {
       console.log("useridwithoutquotes is", userIdWithoutQuotes);
       axios
         .get(
-          `http://localhost:3000/api/bioData/bioDataById/${userIdWithoutQuotes}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataById/${userIdWithoutQuotes}`
         )
         .then((response) => {
           const userData = response.data.data;

@@ -17,7 +17,7 @@ function NewCreateNotification() {
   const handleSubmit = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/messages/create-notification",
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/messages/create-notification",
         {
           method: "POST",
           headers: {

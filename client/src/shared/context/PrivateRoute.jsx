@@ -12,7 +12,7 @@ const ProtectedRouteClient = () => {
     const fetchQuizStatus = async () => {
       try {
         if (isLoggedIn && userID) {
-          const response = await axios.get(`http://localhost:3000/api/users/${userID}`);
+          const response = await axios.get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/users/${userID}`);
           console.log("API response:", response.data);
           setQuizDone(response.data.quiz);
         }

@@ -24,7 +24,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/quiz/${Auth.userID}`)
+      .get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/quiz/${Auth.userID}`)
       .then((response) => {
         setProfile(response.data);
       })

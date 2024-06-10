@@ -27,7 +27,7 @@ function UpdatePaymentAdmin() {
     const fetchPayment = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/payments/getPayment/${id}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/payments/getPayment/${id}`
         );
         const data = await response.json();
         setPayment(data.data.payment);
@@ -76,7 +76,7 @@ function UpdatePaymentAdmin() {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/payments/updatePayment/${id}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/payments/updatePayment/${id}`,
         {
           method: "PUT",
           headers: {
@@ -113,7 +113,7 @@ function UpdatePaymentAdmin() {
         toast.info("Sending email to user...");
         // Send the email
         try {
-          await axios.post("http://localhost:3000/api/sendEmail", {
+          await axios.post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/sendEmail", {
             userEmail: `{${payment.email} }`, // Fixed the data structure
             subject: "Payment Notice",
             html: emailContent,
@@ -140,7 +140,7 @@ function UpdatePaymentAdmin() {
   const handleDeletePayment = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/payments/deletePayment/${id}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/payments/deletePayment/${id}`,
         {
           method: "DELETE",
         }

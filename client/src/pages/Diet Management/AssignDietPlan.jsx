@@ -31,7 +31,7 @@ export default function AssignDietPlan() {
     Aos.init({ duration: 2000, selector: ".food-card" });
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/food/getFoods"
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/getFoods"
       );
       setFoods(response.data.data.foodItems);
       console.log(response.data.data.foodItems);
@@ -42,7 +42,7 @@ export default function AssignDietPlan() {
 
   const fetchUser = async () => {
     const response = await axios.get(
-      `http://localhost:3000/api/bioData/bioDataById/${id}`
+      `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataById/${id}`
     );
     setEmail(response.data.data.bioData.email);
     console.log("bData from main page", response.data.data.bioData.email);
@@ -97,7 +97,7 @@ export default function AssignDietPlan() {
     try {
       if (name === "") return fetchFoods();
       const response = await axios.get(
-        `http://localhost:3000/api/food/searchByName/${name}`
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/searchByName/${name}`
       );
       setFoods(response.data.data.food);
     } catch (error) {
@@ -113,11 +113,11 @@ export default function AssignDietPlan() {
     }
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/bioData/bioDataUpdate/${userId}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataUpdate/${userId}`,
         { dietplan: assignedFoods }
       );
       console.log(response.data);
-      console.log(`http://localhost:3000/api/users/bioDataUpdate/${userId}`);
+      console.log(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/users/bioDataUpdate/${userId}`);
       handleClearAssignedFoods();
       let emailContent = `
       <h1 style="text-align: center; color: #333;">Assigned Diet Plans</h1>
@@ -144,7 +144,7 @@ export default function AssignDietPlan() {
 
       // Send the email
       axios
-        .post("http://localhost:3000/api/sendEmail", {
+        .post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/sendEmail", {
           userEmail: email,
           subject: "Assigned Diet Plans",
           html: emailContent,

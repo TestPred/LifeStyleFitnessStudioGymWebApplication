@@ -23,7 +23,7 @@ function Scanner() {
   const handleAttendance = async (mark) => {
     try {
       const response = await axios.patch(
-        `http://localhost:3000/api/employee/markAttendance/${decrytped}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/markAttendance/${decrytped}`,
         { attendance: mark }
       );
       console.log(response.data);
@@ -62,7 +62,7 @@ function Scanner() {
         const fetchEmployee = async () => {
           try {
             const response = await axios.get(
-              `http://localhost:3000/api/employee/getEmployeeById/${decryptedId}`
+              `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/getEmployeeById/${decryptedId}`
             );
             console.log(response.data);
             if (response.data.data === null) {
@@ -91,7 +91,7 @@ function Scanner() {
       const fetchEmployee = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:3000/api/employee/getEmployeeById/${decrytped}`
+            `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/getEmployeeById/${decrytped}`
           );
           console.log(response.data);
           setFormData(response.data.data.employee);

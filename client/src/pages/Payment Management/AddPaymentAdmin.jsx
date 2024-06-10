@@ -28,7 +28,7 @@ function AddPaymentAdmin() {
     const fetchUser = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/bioData/bioDataById/${id}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataById/${id}`
         );
         const data = await response.json();
         setUserData(data.data.bioData);
@@ -67,7 +67,7 @@ function AddPaymentAdmin() {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/payments/addPayment",
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/payments/addPayment",
         {
           method: "POST",
           headers: {
@@ -146,7 +146,7 @@ function AddPaymentAdmin() {
 
         // Send the email
         try {
-          await axios.post("http://localhost:3000/api/sendEmail", {
+          await axios.post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/sendEmail", {
             userEmail: `{${email} }`,
             subject: "Payment Notice has been Updated",
             html: emailContent,

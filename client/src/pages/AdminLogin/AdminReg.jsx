@@ -19,7 +19,7 @@ const AdminRegistration = () => {
     e.preventDefault();
     console.log(formData);
     axios
-      .post("http://localhost:3000/api/admin/users", formData)
+      .post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/admin/users", formData)
       .then((response) => {
         Toast("Account Created", "success");
         navigate("/diet-plan", {

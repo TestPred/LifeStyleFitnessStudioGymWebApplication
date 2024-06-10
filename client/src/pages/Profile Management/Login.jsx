@@ -42,7 +42,7 @@ export const Login = () => {
     if (validateForm()) {
       setloading(true);
       axios
-        .post("http://localhost:3000/api/users/auth", {
+        .post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/users/auth", {
           email: email,
           password: password,
         })

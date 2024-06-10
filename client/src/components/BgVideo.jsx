@@ -1,5 +1,6 @@
 import React from "react";
 import video from "../assets/Snapinsta.app_video_DE4B219AB0DF57D567E63567642C3AAA_video_dashinit - Trim.mp4";
+import { Link } from "react-router-dom";
 
 function BgVideo() {
   return (
@@ -15,6 +16,11 @@ function BgVideo() {
         <h1 className="text-6xl font-extrabold">Welcome</h1>
         <p className="font-extrabold text-3xl mt-4">to</p>
         <p className="font-extrabold text-3xl">LSFS Gym</p>
+        <Link to="/admin-login">
+          <button className="p-3 border hover:bg-white hover:text-black mt-2 rounded-lg">
+            Admin Login
+          </button>
+        </Link>
       </div>
     </div>
   );

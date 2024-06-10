@@ -18,7 +18,7 @@ const AdminLogin = () => {
     setLoading(true); // Set loading to true when form is submitted
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/admin/auth",
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/admin/auth",
         {
           email,
           password,

@@ -33,7 +33,7 @@ function EditWorkout() {
 
     // Fetch workout details when component mounts
     axios
-      .get(`http://localhost:3000/api/workouts/${id}`)
+      .get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/workouts/${id}`)
       .then((response) => {
         setWorkout(response.data);
         setLoading(false); // Set loading to false after data is fetched
@@ -81,7 +81,7 @@ function EditWorkout() {
 
       // Update workout details (including image URL) in MongoDB
       const response = await axios.put(
-        `http://localhost:3000/api/workouts/${id}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/workouts/${id}`,
         workout
       );
       console.log("Workout updated successfully:", response.data);

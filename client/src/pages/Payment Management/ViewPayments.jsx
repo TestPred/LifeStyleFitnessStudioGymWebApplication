@@ -23,7 +23,7 @@ const ViewPayments = () => {
     const fetchPayments = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/payments/getPayments"
+          "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/payments/getPayments"
         );
         const data = await response.json();
         setPayments(data.data.payments);

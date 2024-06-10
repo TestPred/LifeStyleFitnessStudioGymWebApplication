@@ -35,7 +35,7 @@ function WorkoutPool() {
     }
 
     axios
-      .get("http://localhost:3000/api/workouts/categories")
+      .get("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/workouts/categories")
       .then((response) => {
         setWorkoutCategories(response.data);
       })
@@ -48,7 +48,7 @@ function WorkoutPool() {
   useEffect(() => {
     setUserId(id); // Set userId from URL parameter
     axios
-      .get(`http://localhost:3000/api/bioData/bioDataById/${id}`)
+      .get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataById/${id}`)
       .then((response) => {
         setUserEmail(response.data.data.bioData.email);
         setWorkoutPlanEmpty(
@@ -63,7 +63,7 @@ function WorkoutPool() {
 
   const fetchWorkoutsByCategory = (category) => {
     axios
-      .get(`http://localhost:3000/api/workouts/category/${category}`)
+      .get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/workouts/category/${category}`)
       .then((response) => {
         setWorkoutsByCategory((prevState) => ({
           ...prevState,
@@ -86,7 +86,7 @@ function WorkoutPool() {
   const handleDeleteWorkout = (category, index) => {
     const workoutId = workoutsByCategory[category][index]._id;
     axios
-      .delete(`http://localhost:3000/api/workouts/${workoutId}`)
+      .delete(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/workouts/${workoutId}`)
       .then((response) => {
         const updatedWorkouts = [...workoutsByCategory[category]];
         updatedWorkouts.splice(index, 1);
@@ -191,7 +191,7 @@ function WorkoutPool() {
     }));
 
     axios
-      .post(`http://localhost:3000/api/saveWorkouts`, {
+      .post(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/saveWorkouts`, {
         userId: userId,
         workouts: selectedWorkoutsData,
       })
@@ -236,7 +236,7 @@ function WorkoutPool() {
         emailContent += `<img src="${image}" alt="Company Logo" style="max-width: 100px;">`;
 
         axios
-          .post("http://localhost:3000/api/sendEmail", {
+          .post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/sendEmail", {
             userEmail: userEmail,
             subject: "Assigned Workouts",
             html: emailContent,
@@ -259,7 +259,7 @@ function WorkoutPool() {
 
   const generatePdf = () => {
     axios
-      .get(`http://localhost:3000/api/bioData/bioDataById/${userId}`)
+      .get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataById/${userId}`)
       .then((response) => {
         const userData = response.data.data;
 
@@ -325,7 +325,7 @@ function WorkoutPool() {
 
   const handleClearWorkouts = () => {
     axios
-      .delete(`http://localhost:3000/api/clearWorkouts/${userId}`)
+      .delete(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/clearWorkouts/${userId}`)
       .then((response) => {
         toast.success("Workouts cleared successfully");
         setWorkoutPlanEmpty(true);

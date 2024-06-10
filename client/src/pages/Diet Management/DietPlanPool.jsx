@@ -22,7 +22,7 @@ const DietPlan = () => {
   const fetchFoods = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/food/getFoods"
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/getFoods"
       );
       setFoods(response.data.data.foodItems);
     } catch (error) {
@@ -39,7 +39,7 @@ const DietPlan = () => {
       Aos.init({ duration: 2000, selector: ".food-card" });
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/food/getFoods"
+          "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/getFoods"
         );
         setFoods(response.data.data.foodItems);
       } catch (error) {
@@ -56,7 +56,7 @@ const DietPlan = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/food/deleteFood/${id}`);
+      await axios.delete(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/deleteFood/${id}`);
       setFoods((prevFoods) => prevFoods.filter((food) => food._id !== id));
     } catch (error) {
       console.error("Error deleting food:", error);
@@ -67,7 +67,7 @@ const DietPlan = () => {
     try {
       if (name === "") return fetchFoods();
       const response = await axios.get(
-        `http://localhost:3000/api/food/searchByName/${name}`
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/searchByName/${name}`
       );
       setFoods(response.data.data.food);
     } catch (error) {

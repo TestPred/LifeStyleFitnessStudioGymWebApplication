@@ -49,7 +49,7 @@ const UserProfile = () => {
     const fetchProfileData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/quiz/${userID}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/quiz/${userID}`
         );
         setData(response.data);
       } catch (error) {
@@ -81,7 +81,7 @@ const UserProfile = () => {
     if (isSaveEnabled) {
       try {
         console.log("Updating profile...");
-        axios.put(`http://localhost:3000/api/quiz/${userID}`, {
+        axios.put(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/quiz/${userID}`, {
           QandA: {
             QuizId: data._id,
             fullName: fullName,

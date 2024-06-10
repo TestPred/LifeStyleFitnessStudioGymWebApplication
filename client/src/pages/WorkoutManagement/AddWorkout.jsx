@@ -62,7 +62,7 @@ function AddWorkout() {
         category: category,
       };
       console.log("Request body:", requestBody);
-      const response = await fetch("http://localhost:3000/api/workouts", {
+      const response = await fetch("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/workouts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

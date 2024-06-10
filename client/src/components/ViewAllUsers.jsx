@@ -14,7 +14,7 @@ function ViewAllUsers() {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/getUsers/getUsers"
+          "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/getUsers/getUsers"
         );
         const data = await response.json();
         console.log(data);

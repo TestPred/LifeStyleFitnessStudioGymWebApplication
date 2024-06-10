@@ -13,7 +13,7 @@ const DeleteConfirmBox = () => {
 
   const submitHandler = () => {
     axios
-      .delete(`http://localhost:3000/api/users/delete/${Auth.userID}`)
+      .delete(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/users/delete/${Auth.userID}`)
       .then((res) => {
         if (res.data.message === "Account deleted") {
           Toast("Account deleted Successfully", "success");

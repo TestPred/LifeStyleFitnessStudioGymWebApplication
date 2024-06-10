@@ -25,7 +25,7 @@ function InventoryAdd() {
         return;
       }
 
-      const response = await fetch("http://localhost:3000/api/add", {
+      const response = await fetch("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

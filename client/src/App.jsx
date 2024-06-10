@@ -11,6 +11,8 @@ import DietPlan from "./pages/Diet Management/DietPlanPool";
 import AssignDietPlan from "./pages/Diet Management/AssignDietPlan";
 import ShowDietPlan from "./pages/Diet Management/ShowDietPlan";
 
+import PDFGeneration from "./pages/PDF Generation/InsertDataToPDF.jsx";
+
 import EnterPaymentDetails from "./pages/Payment Management/EnterPaymentDetails";
 import AddUsers from "./pages/Employee Management/AddEmployee";
 import AddCard from "./pages/Payment Management/AddCard";
@@ -23,8 +25,6 @@ import EditWorkout from "./pages/WorkoutManagement/EditWorkout";
 import WorkoutPool from "./pages/WorkoutManagement/WorkouPool";
 import UserExercises from "./pages/WorkoutManagement/UserExercises";
 import AddWorkout from "./pages/WorkoutManagement/AddWorkout";
-
-import PDFGeneration from "./pages/PDF Generation/InsertDataToPDF.jsx";
 
 import InventoryAdd from "./pages/Inventory Management/InventoryAdd";
 import InventoryShow from "./pages/Inventory Management/InventoryShow";
@@ -74,6 +74,8 @@ function App() {
           <Route element={<ProtectedRouteCustomer />}>
             {/* Client Routes */}
             {/* {Isuru} */}
+            <Route path="/pdf/:id" element={<PDFGeneration />} />
+
             <Route path="/user-view-diet-plans" element={<ShowDietPlan />} />
             {/* {Vinuka} */}
             {/* TODO code This hadnle backend as well */}
@@ -98,7 +100,6 @@ function App() {
             <Route path="/editProfile" element={<EditProfile />} />
             <Route path="/profile" element={<UserProfile />} />
           </Route>
-          <Route path="/pdf/:id" element={<PDFGeneration />} />
           <Route path="/test" element={<Test />} />
           <Route path="/sign-up" element={<Signup />} />
           <Route path="/forget-password" element={<ForgetPassword />} />

@@ -67,7 +67,7 @@ function AddFood() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/food/addFood",
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/food/addFood",
         formData,
         {
           headers: {

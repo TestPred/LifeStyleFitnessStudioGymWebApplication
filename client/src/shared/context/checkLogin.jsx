@@ -14,7 +14,7 @@ const CheckLogin = ({ children }) => {
         console.log("fetching user");
         if (userID) {
           const response = await axios.get(
-            `http://localhost:3000/api/users/${userID}`
+            `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/users/${userID}`
           );
           console.log("User fetched");
           console.log(response.data.quiz);

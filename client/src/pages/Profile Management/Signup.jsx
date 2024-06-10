@@ -19,7 +19,7 @@ export const signup = () => {
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
       axios
-        .post("http://localhost:3000/api/users", formData)
+        .post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/users", formData)
         .then((response) => {
           Toast("Account Created", "success");
           navigate("/quiz", {

@@ -17,7 +17,7 @@ function InventoryUpdateDlt() {
 
     const fetchItemByID = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/${id}`);
+        const response = await fetch(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch item");
         }
@@ -36,7 +36,7 @@ function InventoryUpdateDlt() {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch(`http://localhost:3000/api/${id}`, {
+      const response = await fetch(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

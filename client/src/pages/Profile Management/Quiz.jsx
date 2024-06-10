@@ -87,7 +87,7 @@ const Quiz = () => {
           answer: ans,
         }));
         console.log(location.state.id)
-        axios.post("http://localhost:3000/api/quiz/", {
+        axios.post("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/quiz/", {
           userID: auth.userID !== null ? auth.userID :  location.state.id,
           email: auth.email,
           QandA: newQandA

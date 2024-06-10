@@ -26,7 +26,7 @@ function Notifications() {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:3000/api/messages/notifications"
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/messages/notifications"
       );
       // Reverse the order of notifications before setting the state
       setNotifications(response.data.notifications.reverse());

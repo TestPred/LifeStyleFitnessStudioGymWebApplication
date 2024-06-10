@@ -20,7 +20,7 @@ const ShowDietPlan = () => {
       setLoading(true);
       const fetchUser = async () => {
         const response = await axios.get(
-          `http://localhost:3000/api/bioData/bioDataById/${id}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/bioData/bioDataById/${id}`
         );
         setDietPlan(response.data.data.bioData.dietplan);
         console.log("Diet Plan:", response.data.data.bioData.dietplan);

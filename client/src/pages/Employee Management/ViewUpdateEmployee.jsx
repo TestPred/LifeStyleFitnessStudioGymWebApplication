@@ -9,7 +9,6 @@ import { ToastContainer, toast } from "react-toastify";
 import firebase from "firebase/compat/app";
 import "firebase/compat/storage";
 import QRCode from "react-qr-code";
-import PDFGeneration from "../PDF Generation/InsertDataToPDF";
 import { saveAs } from "file-saver";
 import {
   PDFViewer,
@@ -43,7 +42,7 @@ function AddUpdateEmployeeDetails() {
     const fetchEmployee = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/employee/getEmployeeById/${id}`
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/getEmployeeById/${id}`
         );
         console.log(response.data);
         setFormData(response.data.data.employee);
@@ -59,7 +58,7 @@ function AddUpdateEmployeeDetails() {
     e.preventDefault();
     try {
       const response = await axios.patch(
-        `http://localhost:3000/api/employee/updateEmployee/${id}`,
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/updateEmployee/${id}`,
         formData,
         {
           headers: {
@@ -102,7 +101,7 @@ function AddUpdateEmployeeDetails() {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/employee/deleteEmployee/${id}`
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/deleteEmployee/${id}`
       );
       console.log(response.data);
       notify("success", "", "Employee deleted successfully");

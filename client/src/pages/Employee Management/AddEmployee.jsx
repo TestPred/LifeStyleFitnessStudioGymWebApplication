@@ -55,7 +55,7 @@ function AddUsers() {
     console.log(formData);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/employee/addEmployee/", //add endpoint
+        "https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/addEmployee/", //add endpoint
         formData,
         {
           headers: {

@@ -26,7 +26,7 @@ function InventoryShow() {
 
   const fetchInventory = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/");
+      const response = await fetch("https://lifestylefitnessstudiogymwebapplication.onrender.com/api/");
       const data = await response.json();
       setInventory(data.inventory);
       setLoading(false);
@@ -47,7 +47,7 @@ function InventoryShow() {
   const handleDelete = async (itemId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/${itemId}`
+        `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/${itemId}`
       );
       setInventory(inventory.filter((item) => item.id !== itemId));
       console.log("Item deleted successfully");

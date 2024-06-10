@@ -45,7 +45,7 @@ const Test = () => {
     const fetchProfileData = async () => {
       try {
         axios
-          .get(`http://localhost:3000/api/quiz/${userID}`)
+          .get(`https://lifestylefitnessstudiogymwebapplication.onrender.com/api/quiz/${userID}`)
           .then((response) => {
             setData(response.data);
           })

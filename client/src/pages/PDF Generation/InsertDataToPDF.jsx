@@ -18,7 +18,7 @@ function PDFGeneration() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/employee/getEmployeeById/${urlSafeEncode(
+          `https://lifestylefitnessstudiogymwebapplication.onrender.com/api/employee/getEmployeeById/${urlSafeEncode(
             id
           )}` // Encode the ID before passing it to the URL
         );
